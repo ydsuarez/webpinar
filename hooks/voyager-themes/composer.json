@@ -1,0 +1,34 @@
+{
+    "name": "voyager-themes",
+    "description": "This is my first hook.",
+    "require": {
+        "larapack/hooks": "^1.0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "VoyagerThemes\\": "src/"
+        }
+    },
+    "extra": {
+        "hook": {
+            "providers": [
+                "VoyagerThemes\\VoyagerThemesServiceProvider"
+            ],
+            "aliases": {
+                "VoyagerThemes": "VoyagerThemes\\VoyagerThemesFacade"
+            },
+            "migrations": [
+                "resources/database/migrations"
+            ],
+            "seeders": [
+                "resources/database/seeders"
+            ],
+            "unseeders": [
+                "resources/database/unseeders"
+            ],
+            "assets": {
+                "resources/assets": "public/vendor/voyager-themes"
+            }
+        }
+    }
+}
